@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    /* background-image: url("y-so-serious.png"); */
+    background-color: #474747;
+}
+
+header {
+    background: linear-gradient(to right, rgb(19, 9, 63), #0baabe);
+    /* background: #0baabe; */
+    color: #f0f0f0;
+    padding: 14px 0;
+    text-align: right;
+}
+
+.aboutme {
+    background: #0baabe;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove default underline */
+    color: black;          /* Set the text color */
+    position: relative;    /* Set position relative to use absolute positioning for the underline */
+    padding: 5px 0;        /* Add some padding to the link */
+    display: inline-block; /* Ensure the link is treated as an inline block */
+}
+
+.nav-links a::after {
+    content: "";               /* Empty content for the pseudo-element */
+    position: absolute;        /* Position it absolutely */
+    left: 0;                   /* Align to the left of the parent */
+    bottom: 0;                 /* Align to the bottom of the parent */
+    height: 2px;               /* Set the height of the underline */
+    width: 0;                  /* Set the initial width to 0 */
+    background-color: black;   /* Set the underline color */
+    transition: width 0.3s;    /* Add transition for smooth effect */
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#about, #projects, #contact {
+    margin: 20px 0;
+}
+
+.project-card {
+    background: #f4f4f4;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    text-align: center; 
+    padding: 10px
+    /* ie8 */
+}
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
