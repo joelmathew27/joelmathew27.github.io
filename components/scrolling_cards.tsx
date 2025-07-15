@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "./magicui/marquee";
-import { todo } from "node:test";
 
 const hardSkills = [
     {
@@ -118,7 +117,6 @@ const secondRow = softSkills;
 const ReviewCard = ({
     icon,
     title,
-    certificate,
 }: {
     icon: string;
     title: string;

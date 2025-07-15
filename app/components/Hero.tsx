@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { Averia_Libre, Sansita, JetBrains_Mono } from 'next/font/google';
+import {JetBrains_Mono } from 'next/font/google';
 import React from 'react';
 
 // Configure fonts

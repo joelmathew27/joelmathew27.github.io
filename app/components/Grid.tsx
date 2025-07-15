@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import {
@@ -8,6 +7,7 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import { JetBrains_Mono } from 'next/font/google'
+import Image from "next/image";
 
 const jetBrainsMono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -37,17 +37,19 @@ export function ProjectsBentoGrid() {
 
 const Skeleton = ({ imageSrc }: { imageSrc: string }) => (
     <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] border border-transparent dark:border-white/[0.2] bg-[#012346] dark:bg-black">
-        <img
-            src={imageSrc}
-            alt="Cover Image"
-            style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                borderRadius: "0.75rem",
-            }}
-            className="rounded-xl"
-        />
+      <Image
+        src={imageSrc}
+        alt="Cover Image"
+        width={400}
+        height={250}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          borderRadius: "0.75rem",
+        }}
+        className="rounded-xl"
+      />
     </div>
 );
 const items = [

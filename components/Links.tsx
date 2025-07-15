@@ -4,7 +4,6 @@ import {
     IconBrandGithub,
     IconBrandLinkedin,
 } from "@tabler/icons-react";
-import Image from "next/image";
 
 export function Links() {
         const links = [

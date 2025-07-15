@@ -2,7 +2,6 @@ import Hero from "./components/Hero";
 import ExtendedHero from "./components/ExtendedHero";
 import { ProjectsBentoGrid } from "./components/Grid";
 import { MarqueeFull } from "@/components/scrolling_cards";
-import { AnimatedSkillIcons } from "@/components/SkillIcons";
 import { Links } from "@/components/Links";
 
 export default function Home() {
@@ -38,7 +37,7 @@ export default function Home() {
           </div>
           <div className="flex gap-4">
             <a
-              href="jmathew27.career@gmail.com"
+              href="mailto:jmathew27.career@gmail.com"
               className="hover:text-blue-400 transition"
             >
               Email
