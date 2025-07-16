@@ -33,9 +33,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left">
             <h2 className="text-lg font-semibold">Thanks for visiting!</h2>
-            <p className="text-sm text-neutral-400">{/*new Date().getFullYear()*/}- Joel Mathew</p>
+            <p className="text-sm text-left text-neutral-400">{/*new Date().getFullYear()*/}- Joel Mathew</p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-5 pt-6">
             <a
               href="mailto:jmathew27.career@gmail.com"
               className="hover:text-blue-400 transition"

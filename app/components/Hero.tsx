@@ -39,9 +39,19 @@ const Hero = () => {
         </h1>
         <p
           style={{
-            fontSize: '1.5rem',
+            // fontSize: '1.5rem',
             marginBottom: '20px',
             fontWeight: 400,
+            lineHeight: 1.4,
+            wordBreak: 'break-word',
+            width: '100%',
+            maxWidth: '100%',
+            whiteSpace: 'pre-line',
+            overflowWrap: 'break-word',
+            WebkitFontSmoothing: 'antialiased',
+            MozOsxFontSmoothing: 'grayscale',
+            transition: 'font-size 0.2s',
+            fontSize: 'clamp(1rem, 4vw, 1.5rem)',
           }}
         >
           Student | Engineer | Creator
