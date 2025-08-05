@@ -102,6 +102,10 @@ const softSkills = [
 const certifications = 
 [
     {
+        title: "Google Cybersecurity Professional Certificate",
+        icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/google-logo-k9hftedfg7qbpekzcbnf.png/google-logo-xc73ec45iidg9pnamrrgn.png?_a=DATAg1AAZAA0",
+    },
+    {
         title: "Cisco Certified Technician - Cybersecurity",
         icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/cisco-l3gskuuxwrn2ucf37bndyo.png/cisco-c4imfoaakqdtknvresynr.png?_a=DAJFJtWIZAAC",
     },
