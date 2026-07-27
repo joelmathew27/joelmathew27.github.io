@@ -1,6 +1,4 @@
 import type { Config } from "tailwindcss";
-import { JetBrains_Mono } from "next/font/google";
-
 
 export default {
     darkMode: ["class"],
