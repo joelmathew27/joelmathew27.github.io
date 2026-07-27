@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 
-
 export const BentoGrid = ({
   className,
   children,
@@ -9,15 +8,13 @@ export const BentoGrid = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div className="bg-[#012346]">
-        <div
-          className={cn(
-            "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto bg-[#012346]",
-            className
-          )}
-        >
-          {children}
-        </div>
+    <div
+      className={cn(
+        "grid grid-cols-1 gap-5 md:grid-cols-3",
+        className,
+      )}
+    >
+      {children}
     </div>
   );
 };
@@ -29,6 +26,7 @@ export const BentoGridItem = ({
   header,
   icon,
   link,
+  tags = [],
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -36,6 +34,7 @@ export const BentoGridItem = ({
   header?: React.ReactNode;
   icon?: React.ReactNode;
   link?: string;
+  tags?: string[];
 }) => {
   return (
     <a
@@ -43,19 +42,29 @@ export const BentoGridItem = ({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-      "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-black border border-transparent justify-between flex flex-col space-y-4",
-      className
+        "group/bento row-span-1 flex flex-col justify-between space-y-5 rounded-[1.5rem] border border-white/10 bg-white/[0.055] p-4 shadow-2xl shadow-blue-950/20 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.08] hover:shadow-cyan-950/40",
+        className,
       )}
     >
       {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
-      {icon}
-      <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-        {title}
-      </div>
-      <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
-        {description}
-      </div>
+      <div>
+        <div className="mb-3 flex items-center gap-2 text-cyan-200">
+          {icon}
+          <span className="text-xs font-bold uppercase tracking-[0.25em]">Case study</span>
+        </div>
+        <div className="text-xl font-bold text-white transition duration-200 group-hover/bento:text-orange-200">
+          {title}
+        </div>
+        <div className="mt-3 text-sm leading-6 text-slate-300">
+          {description}
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span key={tag} className="rounded-full border border-cyan-200/10 bg-cyan-200/10 px-3 py-1 text-xs text-cyan-100">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </a>
   );

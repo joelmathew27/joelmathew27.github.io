@@ -3,6 +3,14 @@ import { Marquee } from "./magicui/marquee";
 
 const hardSkills = [
     {
+        title: "STM32 / ESP32",
+        icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/1/circuit-board-s3fibzmuwwga3pkgxn28s.png?_a=DAJFJtWIZAAC",
+    },
+    {
+        title: "KiCad + Schematics",
+        icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/1/circuit-board-s3fibzmuwwga3pkgxn28s.png?_a=DAJFJtWIZAAC",
+    },
+    {
         title: "Java",
         icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/java-3l83r8hh7v5yhem0n2e1d.png/java-uny7np2dj70tb7u5at0ko.png?_a=DAJFJtWIZAAC",
     },
@@ -131,15 +139,15 @@ const ReviewCard = ({
             className={cn(
             "relative h-full w-40 cursor-pointer overflow-hidden rounded-xl border p-2",
             // light styles
-            "border-[#aed6f1]/[.1] bg-[#134374] hover:bg-[#aed6f1]/[.05]",
+            "border-cyan-200/10 bg-white/[0.06] hover:border-orange-200/40 hover:bg-white/[0.1]",
             // dark styles
-            "dark:border-[#aed6f1]/[.1] dark:bg-[#012346] dark:hover:bg-[#aed6f1]/[.15]",
+            "dark:border-cyan-200/10 dark:bg-white/[0.06] dark:hover:bg-white/[0.1]",
             )}
         >
             <div className="flex flex-col items-center justify-between h-full gap-1">
             <img className="rounded-md" width="48" height="48" alt="" src={icon} />
             <figcaption
-                className="text-sm font-medium text-[#aed6f1] text-center mt-auto mb-auto"
+                className="text-sm font-medium text-cyan-50 text-center mt-auto mb-auto"
                 style={{
                 fontSize: `clamp(0.75rem, ${Math.max(1.5 - title.length * 0.05, 0.75)}rem, 1rem)`,
                 }}
@@ -154,15 +162,15 @@ const ReviewCard = ({
 
 export function MarqueeFull() {
     return (
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#012346] pb-8">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#020b18] px-6 py-16">
             <p
             style={{
             fontSize: '1.5rem',
             marginBottom: '20px',
             fontWeight: 400,
-            color: '#aed6f1',
+            color: '#e6f6ff',
             }}
-            >Certifications / Skills</p>
+            >Certifications / Skills for embedded teams</p>
             <Marquee pauseOnHover repeat={1} className="[--duration:10000000s] max-w-4xl mx-auto">
                 {certifications.map((cert) => (
                     <ReviewCard key={cert.title} icon={cert.icon} title={cert.title} />
