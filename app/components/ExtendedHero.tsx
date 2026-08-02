@@ -1,44 +1,66 @@
-import React from 'react'
-import { JetBrains_Mono } from 'next/font/google'
-import Image from 'next/image'
+import React from 'react';
+import { JetBrains_Mono } from 'next/font/google';
 
 const jetBrainsMono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '700'] });
 
-const HeroExtended = () => {
+const domains = [
+  { label: 'Embedded', detail: 'ESP32 · STM32 · I2S · SPI' },
+  { label: 'FPGA / HDL', detail: 'Altera MAX · PWM · Simulation' },
+  { label: 'Firmware', detail: 'C · C++ · Bare-Metal' },
+  { label: 'Hardware', detail: 'KiCad · Schematics · PCB' },
+  { label: 'Security', detail: 'Encryption · Secure Boot' },
+  { label: 'Full-Stack', detail: 'Next.js · React · TypeScript' },
+];
+
+const DomainBar = () => {
   return (
-    <div
-      className={`${jetBrainsMono.className} flex flex-wrap md:flex-nowrap justify-center items-start h-full bg-[#012346] text-[#aed6f1] px-5 pb-10`}
+    <section
+      className={jetBrainsMono.className}
+      style={{
+        background: '#0a3558',
+        borderTop: '1px solid rgba(56,189,248,0.15)',
+        borderBottom: '1px solid rgba(56,189,248,0.15)',
+        padding: '24px 24px',
+      }}
     >
-      <Image
-        src="/room1.png"
-        alt="Cover Image"
-        width={400}
-        height={300}
-        className="w-full max-w-[300px] md:max-w-[400px] h-auto flex-auto m-[50px_10px_10px_20px] p-5"
-        priority
-      />
       <div
-        className="flex flex-col justify-center items-start pt-[20px] md:pt-[100px] md:ml-3 max-w-[800px]"
+        style={{
+          maxWidth: '900px',
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+          gap: '16px 8px',
+        }}
       >
-        <p className="text-base md:text-lg max-w-[400px] mb-[30px]">
-          Welcome to my portfolio! I am a student at Texas A&M with a passion for cybersecurity, electrical systems, and software development.
-        </p>
-        <a
-          href="./jmathew_site-resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button
-            type="button"
-            className="px-4 py-2 rounded-md border border-[#aed6f1] bg-[#012346] text-11 hover:-translate-y-1 transform transition duration-200 hover:shadow-lg hover:text-orange-500"
-            tabIndex={-1}
+        {domains.map((d, i) => (
+          <div
+            key={d.label}
+            style={{
+              textAlign: 'center',
+              padding: '8px 4px',
+              borderRight: i < domains.length - 1 ? '1px solid rgba(148,163,184,0.1)' : 'none',
+            }}
           >
-            Download Resume
-          </button>
-        </a>
+            <div
+              style={{
+                fontSize: '0.78rem',
+                fontWeight: 700,
+                color: '#e2e8f0',
+                letterSpacing: '0.04em',
+                marginBottom: '3px',
+                textTransform: 'uppercase',
+              }}
+            >
+              {d.label}
+            </div>
+            <div style={{ fontSize: '0.66rem', color: '#38bdf8', opacity: 0.75, lineHeight: 1.4 }}>
+              {d.detail}
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
-export default HeroExtended;
+export default DomainBar;
